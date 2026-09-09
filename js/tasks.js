@@ -419,3 +419,15 @@ taskForm.addEventListener("submit", (event) => {
 });
 
 renderTasks();
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(() => {
+        console.log("Service Workerを登録しました。");
+      })
+      .catch((error) => {
+        console.error("Service Workerの登録に失敗しました。", error);
+      });
+  });
+}

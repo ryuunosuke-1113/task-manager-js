@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>タスク管理</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>タスク管理</h1>
+
+      <button
+        type="button"
+        id="toggle-task-form"
+        class="button button-primary add-task-button"
+      >
+        ＋ タスク追加
+      </button>
+      <section id="task-form-section" class="task-form-section" hidden>
+        <h2>タスク追加</h2>
+
+        <form id="task-form">
+          <div class="form-group">
+            <label for="title">タスク名</label>
+
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description">メモ</label>
+
+            <textarea id="description" name="description" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="due-date">期限</label>
+
+            <input type="date" id="due-date" name="dueDate" required />
+          </div>
+
+          <div class="form-group">
+            <label for="length">長さ</label>
+
+            <select id="length" name="length">
+              <option value="1">短い</option>
+              <option value="2" selected>普通</option>
+              <option value="3">長時間</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary">
+              追加する
+            </button>
+
+            <button type="button" id="close-task-form" class="button">
+              閉じる
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="task-section overdue-section">
+        <div class="section-header">
+          <h2>期限切れ</h2>
+          <span id="overdue-count" class="task-count">0</span>
+        </div>
+
+        <div id="overdue-task-list"></div>
+      </section>
+
+      <section class="task-section">
+        <div class="section-header">
+          <h2>これからのタスク</h2>
+          <span id="active-count" class="task-count">0</span>
+        </div>
+
+        <div id="active-task-list"></div>
+      </section>
+
+      <section class="task-section completed-section">
+        <div class="section-header">
+          <h2>完了済みタスク</h2>
+          <span id="completed-count" class="task-count">0</span>
+        </div>
+
+        <div id="completed-task-list"></div>
+      </section>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/tasks.js"></script>
+  </body>
+</html>

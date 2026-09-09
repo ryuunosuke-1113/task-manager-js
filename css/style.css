@@ -1,0 +1,405 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  background: #f5f5f5;
+  color: #222;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.task-section {
+  margin-top: 28px;
+}
+
+.task-form-section {
+  margin-top: 16px;
+  padding: 16px;
+
+  background: #fff;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 10px 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button {
+  min-height: 44px;
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.button-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+.task-card {
+  margin-top: 12px;
+  padding: 16px;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  font-size: 18px;
+}
+
+.task-description {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+.task-info {
+  margin-bottom: 16px;
+}
+
+.task-info p {
+  margin: 4px 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions .button {
+  flex: 1;
+}
+
+.button-complete {
+  background: #16a34a;
+  color: #fff;
+}
+
+.button-edit {
+  background: #e5e7eb;
+  color: #222;
+}
+
+.button-delete {
+  background: #dc2626;
+  color: #fff;
+}
+.task-card.overdue {
+  border-left: 5px solid #dc2626;
+  background: #fff5f5;
+}
+
+.task-card.overdue .task-title {
+  color: #b91c1c;
+}
+.task-card.completed {
+  opacity: 0.72;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+}
+
+.button-restore {
+  background: #f59e0b;
+  color: #fff;
+}
+.button-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  background: #e5e7eb;
+  color: #222;
+}
+
+.edit-error {
+  margin-top: 16px;
+  padding: 16px;
+
+  border-radius: 10px;
+
+  background: #fee2e2;
+  color: #991b1b;
+}
+body {
+  background: #f3f4f6;
+}
+
+.container {
+  padding-bottom: 40px;
+}
+
+/* =========================
+   見出し
+========================= */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.task-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 30px;
+  height: 30px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  background: #e5e7eb;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================
+   タスクカード
+========================= */
+
+.task-card {
+  position: relative;
+
+  margin-top: 12px;
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-title {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.task-description {
+  margin: 0 0 14px;
+
+  color: #4b5563;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+.task-info {
+  padding: 10px 12px;
+
+  background: #f9fafb;
+
+  border-radius: 9px;
+}
+
+.task-info p {
+  margin: 4px 0;
+
+  font-size: 14px;
+}
+
+/* =========================
+   ボタン
+========================= */
+
+.task-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.task-actions .button {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 9px 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button {
+  transition:
+    transform 0.1s ease,
+    opacity 0.1s ease;
+}
+
+.button:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* =========================
+   期限切れ
+========================= */
+
+.overdue-section .section-header h2 {
+  color: #b91c1c;
+}
+
+.overdue-section .task-count {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.task-card.overdue {
+  border: 1px solid #fecaca;
+  border-left: 5px solid #dc2626;
+
+  background: #fffafa;
+}
+
+/* =========================
+   完了済み
+========================= */
+
+.task-card.completed {
+  opacity: 0.7;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+}
+
+.completed-section .task-count {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* =========================
+   追加フォーム
+========================= */
+
+.task-form-section {
+  margin-top: 16px;
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.task-form-section h2 {
+  margin-top: 0;
+}
+.add-task-button {
+  width: 100%;
+
+  min-height: 50px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================
+   スマホ調整
+========================= */
+
+@media (max-width: 420px) {
+  .container {
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .task-actions {
+    gap: 6px;
+  }
+
+  .task-actions .button {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
